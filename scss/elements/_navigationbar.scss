@@ -1,0 +1,44 @@
+@import '../_variables.scss';
+@mixin set_border($color) {
+    border: 2px solid $color;
+    border-radius: 20px;
+}
+@mixin set_button {
+    padding: 13px 25px;
+    font-weight: 500;
+}
+
+.nav_bar{
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 13em;
+
+    ul, li, a{display: inline-block;}
+    img{height: auto;width: 6.3em;}
+
+    ul{
+        a{
+        @include set_button();
+        @include set_border($default_color_bg);
+
+        transition: border 300ms ease-in-out 0s;
+        }
+        li{
+            margin: 0 15px;
+        }
+
+        /* Hover section */
+        a:hover{
+            @include set_border($default_color_black);
+        }
+    }
+
+    .contact_button{
+        @include set_button();
+        @include set_border($default_color_nuance);
+
+        color: $default_color_bg;
+        background-color: $default_color_nuance;
+    }
+}

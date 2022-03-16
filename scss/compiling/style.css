@@ -1,0 +1,72 @@
+/*Default variable*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+*, ::before, ::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+  /*Default background color for not breaking eyes*/
+  color: #0f0f0f;
+  font-size: 15px;
+}
+
+body {
+  background-color: #ebebeb;
+}
+
+/*Default variable*/
+/*Default variable*/
+.nav_bar {
+  /* background-color: red; */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 25px 13em;
+}
+
+.nav_bar ul, .nav_bar li, .nav_bar a {
+  display: inline-block;
+}
+
+.nav_bar img {
+  height: auto;
+  width: 6.3em;
+}
+
+.nav_bar ul {
+  /* Hover section */
+}
+
+.nav_bar ul a {
+  padding: 13px 25px;
+  font-weight: 500;
+  border: 2px solid #ebebeb;
+  border-radius: 20px;
+  -webkit-transition: border 300ms ease-in-out 0s;
+  transition: border 300ms ease-in-out 0s;
+}
+
+.nav_bar ul li {
+  margin: 0 15px;
+}
+
+.nav_bar ul a:hover {
+  border: 2px solid #0f0f0f;
+  border-radius: 20px;
+}
+
+.nav_bar .contact_button {
+  padding: 13px 25px;
+  font-weight: 500;
+  border: 2px solid #71b2cc;
+  border-radius: 20px;
+  color: #ebebeb;
+  background-color: #71b2cc;
+}
