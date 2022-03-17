@@ -29,6 +29,8 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 25px 13em;
+  /* Navigations Links */
+  /* Special Button */
 }
 
 .nav_bar ul, .nav_bar li, .nav_bar a {
@@ -47,26 +49,42 @@ body {
 .nav_bar ul a {
   padding: 13px 25px;
   font-weight: 500;
-  border: 2px solid #ebebeb;
-  border-radius: 20px;
-  -webkit-transition: border 300ms ease-in-out 0s;
-  transition: border 300ms ease-in-out 0s;
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  -webkit-transition: color 500ms ease-in-out 0s;
+  transition: color 500ms ease-in-out 0s;
 }
 
 .nav_bar ul li {
   margin: 0 15px;
 }
 
+.nav_bar ul a::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  background-color: #0f0f0f;
+  height: 100%;
+  width: 0;
+  top: 0px;
+  left: -2px;
+  -webkit-transition: width 600ms ease-in-out 0s;
+  transition: width 600ms ease-in-out 0s;
+}
+
 .nav_bar ul a:hover {
-  border: 2px solid #0f0f0f;
-  border-radius: 20px;
+  color: #ebebeb;
+}
+
+.nav_bar ul a:hover::before {
+  width: 102%;
 }
 
 .nav_bar .contact_button {
   padding: 13px 25px;
   font-weight: 500;
-  border: 2px solid #71b2cc;
-  border-radius: 20px;
+  border-radius: 15px;
   color: #ebebeb;
   background-color: #71b2cc;
 }
