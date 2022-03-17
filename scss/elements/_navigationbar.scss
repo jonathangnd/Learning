@@ -15,45 +15,64 @@
 
     /* Navigations Links */
     ul{
-        a{
-            @include set_button();
-            position: relative;
-            overflow: hidden;
-
-            border-radius: 15px;
-
-            transition: color 500ms ease-in-out 0s;
-        }
         li{
             margin: 0 15px;
         }
-        a::before{
-            content: '';
-            position: absolute;
-            z-index: -1;
-            background-color: $default_color_black;
+        a{
+            @include set_button();
 
-            height: 100%;width: 0;
-            top: 0px;left: -2px;
+            border: 2px solid transparent;
+            border-radius: 15px;
 
-            transition: width 600ms ease-in-out 0s;
+            transition: border-color 300ms ease-in-out 0s;
         }
-
-        /* Hover section */
         a:hover{
-            color: $default_color_bg;
-        }
-        a:hover::before{
-            width: 102%;
+            border-color: $default_color_black;
         }
     }
 
     /* Special Button */
     .contact_button{
         @include set_button();
+        position: relative;
+        overflow: hidden;
+
+        border: 2px solid transparent;
         border-radius: 15px;
 
         color: $default_color_bg;
+
+        transition: color 300ms ease 0s, border 300ms ease 0s;
+    }
+    .contact_button::before{
+        content: ' ';
+        position: absolute;
+        z-index: -2;
+
         background-color: $default_color_nuance;
+
+        height: 100%;width: 100%;
+        top: 0;left: 0;
+    }
+    .contact_button::after{
+        content: ' ';
+        position: absolute;
+        z-index: -1;
+
+        background-color: $default_color_bg;
+
+        height: 100%;width: 0;
+        top: 0;left: 0;
+        
+        transition: width 300ms ease 0.1s;
+    }
+
+    /* Hover Section */
+    .contact_button:hover{
+        color: $default_color_black;
+        border-color: $default_color_nuance;
+    }
+    .contact_button:hover::after{
+        width: 100%;
     }
 }
